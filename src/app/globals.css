@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,12 +19,60 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: white;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.btn-text {
+  font-family: "Montserrat";
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 80px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 57px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.btn-text {
+  font-weight: 700;
+  line-height: 28px;
+  font-size: 14px;
 }
 
 @layer utilities {

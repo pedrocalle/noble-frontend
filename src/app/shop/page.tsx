@@ -14,6 +14,7 @@ interface Product {
 
 export default function Shop() {
   const { data, loading, error } = FetchApi("/products");
+
   return (
     <>
       <NavBar />
@@ -29,7 +30,7 @@ export default function Shop() {
           </div>
           <div className="grid grid-cols-3 gap-3 mb-20">
             {data?.map((product: Product) => {
-              <Card
+             return <Card
                 key={product.id}
                 name={product.name}
                 description={product.description}

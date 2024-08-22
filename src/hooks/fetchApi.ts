@@ -10,7 +10,6 @@ function FetchApi(endpoint: string) {
     async function fetchData() {
       try {
         const response = await api.get(endpoint);
-        console.log(response);
         setData(response.data);
       } catch (err) {
         setError(err);
@@ -19,8 +18,8 @@ function FetchApi(endpoint: string) {
       }
     }
 
-    fetchData;
-  }, [endpoint]);
+    fetchData();
+  }, []);
 
   return { data, loading, error };
 }

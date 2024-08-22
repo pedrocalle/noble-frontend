@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <NavBar />
       <div className="h-screen w-screen flex overflow-hidden">
-        <div className="bg-[url('/bg-hero1.png')] bg-cover bg-center h-screen w-1/2 flex items-center justify-center">
+        <div className="bg-[url('/bg-hero1.png')] bg-cover bg-center h-screen w-1/2 flex items-center justify-center pl-5">
           <div>
             <h5 className="text-white mb-6">SUMMER 2024</h5>
             <h1 className="text-white mb-6">Black T-shirt Olympics</h1>

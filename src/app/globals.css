@@ -23,6 +23,17 @@ body {
   overflow-x: hidden;
 }
 
+input,
+select {
+  padding: 13.5px 12px;
+  border: solid 2px #e0e0e0;
+  border-radius: 6px;
+}
+
+select {
+  color: black;
+}
+
 h1,
 h2,
 h3,

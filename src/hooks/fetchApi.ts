@@ -19,7 +19,7 @@ function FetchApi(endpoint: string) {
     }
 
     fetchData();
-  }, []);
+  }, [endpoint]);
 
   return { data, loading, error };
 }

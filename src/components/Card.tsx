@@ -1,7 +1,14 @@
 import Image from "next/image";
 import { Button } from "./Button";
 
-export function Card() {
+interface CardProps {
+  name: string;
+  stock: number;
+  description: string;
+  price: number;
+}
+
+export function Card({ name, stock, description, price }: CardProps) {
   return (
     <div className="flex-col border border-black pb-4">
       <Image
@@ -13,10 +20,10 @@ export function Card() {
       />
       <div className="">
         <h5 className="text-black text-center flex-col items-center justify-center mb-2">
-          Graphic Design
+          {name}
         </h5>
         <p className=".btn-text font-normal text-black text-center w-40 mx-auto mb-5">
-          We focus on ergonomics and meeting you....
+          {description}
         </p>
         <div className="flex justify-center">
           <Button content="Add to cart" variant="black" />

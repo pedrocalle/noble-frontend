@@ -1,7 +1,19 @@
+"use client";
 import { Card } from "@/components/Card";
 import { NavBar } from "@/components/NavBar";
+import FetchApi from "@/hooks/fetchApi";
+import { useEffect } from "react";
+
+interface Product {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  stock: number;
+}
 
 export default function Shop() {
+  const { data, loading, error } = FetchApi("/products");
   return (
     <>
       <NavBar />
@@ -15,22 +27,16 @@ export default function Shop() {
               realms of Classical physics: Newtonian mechanic
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-3">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+          <div className="grid grid-cols-3 gap-3 mb-20">
+            {data?.map((product: Product) => {
+              <Card
+                key={product.id}
+                name={product.name}
+                description={product.description}
+                price={product.price}
+                stock={product.stock}
+              />;
+            })}
           </div>
         </div>
       </div>

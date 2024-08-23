@@ -1,8 +1,15 @@
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, User } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
+
 
 export function NavBar() {
+  const router = useRouter();
+  function handleClick() {
+    router.push("/login");
+  }
   return (
     <div className="bg-white px-48 fixed w-screen h-24 flex items-center justify-between shadow-xl">
       <div className="">
@@ -34,7 +41,7 @@ export function NavBar() {
           <span className="absolute left-0 bottom-0 w-full h-1 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
         </li>
       </ul>
-      <ShoppingCart className="text-black" />
+      <User onClick={handleClick} className="text-black cursor-pointer hover:text-blue-500" />
     </div>
   );
 }
